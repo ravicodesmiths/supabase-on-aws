@@ -2,7 +2,7 @@ import { App } from 'aws-cdk-lib';
 import { BootstraplessStackSynthesizer } from 'cdk-bootstrapless-synthesizer';
 import { SupabaseStack } from './supabase-stack';
 import { SupabaseWafStack } from './supabase-waf-stack';
-
+import { StudioHostingStack } from './studio-hosting-stack';
 const isCfnPublishing: boolean = typeof process.env.BSS_FILE_ASSET_BUCKET_NAME != 'undefined';
 
 const env = (isCfnPublishing)
