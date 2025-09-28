@@ -18,5 +18,7 @@ const app = new App();
 new SupabaseWafStack(app, 'SupabaseWaf', { env: { region: 'us-east-1' } });
 
 new SupabaseStack(app, 'Supabase', { env, synthesizer });
-
+new StudioHostingStack(app, 'SupabaseStudioHostingStack', {
+  env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+});
 app.synth();
